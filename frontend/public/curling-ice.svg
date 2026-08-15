@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1600 1000"
+     preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfeff"/>
+      <stop offset="38%" stop-color="#edf8fc"/>
+      <stop offset="72%" stop-color="#e3f3fa"/>
+      <stop offset="100%" stop-color="#d9edf7"/>
+    </linearGradient>
+
+    <radialGradient id="glow1" cx="28%" cy="18%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="78%" cy="48%" r="55%">
+      <stop offset="0%" stop-color="#b8deef" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#b8deef" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="scratches"
+             width="170"
+             height="170"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(-18)">
+      <path d="M10 0 V170"
+            stroke="#ffffff"
+            stroke-opacity="0.26"
+            stroke-width="1"/>
+      <path d="M68 0 V170"
+            stroke="#5eafd3"
+            stroke-opacity="0.035"
+            stroke-width="1"/>
+      <path d="M132 0 V170"
+            stroke="#ffffff"
+            stroke-opacity="0.20"
+            stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- лёд -->
+  <rect width="1600" height="1000" fill="url(#ice)"/>
+  <rect width="1600" height="1000" fill="url(#glow1)"/>
+  <rect width="1600" height="1000" fill="url(#glow2)"/>
+  <rect width="1600" height="1000" fill="url(#scratches)"/>
+
+  <!-- очень слабые ледовые царапины -->
+  <g fill="none"
+     stroke="#ffffff"
+     stroke-width="1"
+     stroke-linecap="round"
+     opacity="0.26">
+    <path d="M80 770 C360 690 610 760 910 670"/>
+    <path d="M210 190 C500 260 740 185 1020 250"/>
+    <path d="M60 480 C380 520 650 435 920 505"/>
+    <path d="M420 920 C680 820 950 900 1220 810"/>
+    <path d="M620 80 C780 135 980 95 1130 155"/>
+  </g>
+
+  <!-- центральная линия -->
+  <line x1="255"
+        y1="0"
+        x2="255"
+        y2="1000"
+        stroke="#2d78b7"
+        stroke-width="5"
+        opacity="0.09"/>
+
+  <!-- hog / tee линии -->
+  <line x1="0"
+        y1="245"
+        x2="1600"
+        y2="245"
+        stroke="#cc3a3a"
+        stroke-width="5"
+        opacity="0.075"/>
+
+  <line x1="0"
+        y1="650"
+        x2="1600"
+        y2="650"
+        stroke="#377eb8"
+        stroke-width="5"
+        opacity="0.065"/>
+
+  <!-- HOUSE -->
+  <g transform="translate(255 650)" opacity="0.17">
+
+    <!-- внешний синий круг -->
+    <circle r="210" fill="#377fbd"/>
+
+    <!-- белый круг -->
+    <circle r="158" fill="#f9fdff"/>
+
+    <!-- красный круг -->
+    <circle r="108" fill="#d64242"/>
+
+    <!-- центр -->
+    <circle r="52" fill="#f9fdff"/>
+
+    <!-- button -->
+    <circle r="13" fill="#377fbd"/>
+
+    <!-- линии через house -->
+    <line x1="-245"
+          y1="0"
+          x2="245"
+          y2="0"
+          stroke="#377fbd"
+          stroke-width="5"/>
+
+    <line x1="0"
+          y1="-245"
+          x2="0"
+          y2="245"
+          stroke="#377fbd"
+          stroke-width="5"/>
+  </g>
+
+  <!-- лёгкий общий белый слой -->
+  <rect width="1600"
+        height="1000"
+        fill="#ffffff"
+        opacity="0.12"/>
+</svg>

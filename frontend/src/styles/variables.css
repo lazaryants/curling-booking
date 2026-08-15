@@ -1,0 +1,60 @@
+:root {
+  /* Цвета */
+  --color-primary: #01579b;
+  --color-primary-dark: #004d40;
+  --color-secondary: #d32f2f;
+  --color-secondary-dark: #b71c1c;
+  --color-success: #2e7d32;
+  --color-warning: #f57c00;
+  --color-error: #c62828;
+  
+  /* Фоны */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-light: #e3f2fd;
+  --bg-dark: #f9f9f9;
+  --bg-card: #ffffff;
+  
+  /* Текст */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  
+  /* Отступы */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+  
+  /* Радиусы */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Тени */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-md: 0 2px 5px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 10px rgba(0,0,0,0.15);
+  
+  /* Шрифты */
+  --font-primary: Arial, sans-serif;
+  --font-size-sm: 0.85rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.3rem;
+  
+  /* Анимации */
+  --transition: all 0.3s ease;
+  
+  /* Карты/контейнеры */
+  --card-padding: 20px;
+  --card-border-radius: 8px;
+  --card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  /* Кнопки */
+  --btn-padding: 10px 20px;
+  --btn-border-radius: 4px;
+  --btn-font-size: 1rem;
+  --btn-font-weight: bold;
+}

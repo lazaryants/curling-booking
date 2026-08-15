@@ -1,0 +1,1004 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========== ШАПКА ========== */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #01579b 0%, #004d40 100%);
+  border: 3px solid #01579b;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(1, 87, 155, 0.3);
+}
+
+.welcome-section h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.user-greeting p, .auth-prompt p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.highlight-text, .prompt-text {
+  font-weight: bold;
+  color: #ffd54f;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 1.4rem;
+}
+
+.profile-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: white;
+  color: #01579b;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.profile-btn:hover {
+  background: #e3f2fd;
+  transform: translateY(-2px);
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.login-btn {
+  background: white;
+  color: #01579b;
+  border: 2px solid white;
+}
+
+.login-btn:hover {
+  background: #e3f2fd;
+  transform: translateY(-2px);
+}
+
+.register-btn {
+  background: #4caf50;
+  color: white;
+  border: 2px solid #4caf50;
+}
+
+.register-btn:hover {
+  background: #388e3c;
+  transform: translateY(-2px);
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(1, 87, 155, 0.28);
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow:
+    0 10px 30px rgba(22, 73, 110, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(3px);
+}
+
+/* ========== ПЕРЕКЛЮЧАТЕЛЬ ========== */
+.view-toggle {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.view-toggle button {
+  padding: 12px 24px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.view-toggle button.active {
+  background: #d32f2f;
+  color: white;
+}
+
+/* ========== ДНЕВНОЙ РЕЖИМ ========== */
+.date-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 15px;
+  background: #e3f2fd;
+  border: 2px solid #01579b;
+  border-radius: 8px;
+}
+
+.date-selector button {
+  padding: 8px 16px;
+  background: #01579b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-selector button:hover {
+  background: #004d40;
+}
+
+.date-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #01579b;
+  min-width: 250px;
+  text-align: center;
+  padding: 8px 16px;
+  background: white;
+  border-radius: 6px;
+  border: 2px solid #01579b;
+}
+
+.lanes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  background: white;
+  border: 3px solid #01579b;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.lane {
+  border: 2px solid #01579b;
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.lane h2 {
+  margin: 0 0 15px 0;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #01579b 0%, #004d40 100%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slot {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.slot-time {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  color: #01579b;
+  margin-bottom: 5px;
+}
+
+.slot-info {
+  font-size: 0.85rem;
+  color: #333;
+  text-align: center;
+}
+
+.placeholder {
+  height: 2.5em;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.user-phone {
+  color: #01579b;
+  font-size: 0.85rem;
+}
+
+.slot:hover:not(.booked):not(.past) {
+  background: #e3f2fd;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  border-color: #01579b;
+}
+
+.slot.booked {
+  cursor: pointer;
+}
+
+.slot.pending {
+  background: #fff9c4;
+  border-color: #ffd54f;
+  border-width: 3px;
+}
+
+.slot.confirmed {
+  background: #e8f5e9;
+  border-color: #4caf50;
+  border-width: 3px;
+}
+
+.slot.past {
+  background: #a9a9a9;
+  border-color: #696969;
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+  border-width: 2px;
+}
+
+/* ========== НЕДЕЛЬНЫЙ РЕЖИМ ========== */
+.week-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #01579b 0%, #004d40 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.nav-btn {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+  background: #e3f2fd;
+}
+
+.week-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.week-days {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.day-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #01579b;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.day-row:hover {
+  box-shadow: 0 4px 12px rgba(1, 87, 155, 0.15);
+}
+
+.day-header {
+  min-width: 80px;
+  text-align: center;
+  padding: 8px;
+  background: #01579b;
+  color: white;
+  border-radius: 6px;
+}
+
+.day-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.day-date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.day-bookings {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f5f5f5;
+  border-left: 4px solid;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  min-height: 50px;
+  width: 100%;
+}
+
+.booking-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.booking-card.pending {
+  background: #fff9c4;
+  border-left-color: #ffd54f;
+}
+
+.booking-card.confirmed {
+  background: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+.booking-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.booking-time {
+  font-weight: bold;
+  color: #01579b;
+  min-width: 85px;
+}
+
+.booking-lane {
+  background: #01579b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+.booking-user {
+  color: #333;
+  font-weight: 500;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 8px;
+  min-width: 70px;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.action-btn.confirm {
+  background: #4caf50;
+  color: white;
+}
+
+.action-btn.confirm:hover:not(:disabled) {
+  background: #388e3c;
+  transform: scale(1.1);
+}
+
+.action-btn.confirm.disabled,
+.action-btn.confirm:disabled {
+  background: #c8e6c9;
+  color: #9e9e9e;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.action-btn.cancel {
+  background: #d32f2f;
+  color: white;
+}
+
+.action-btn.cancel:hover {
+  background: #b71c1c;
+  transform: scale(1.1);
+}
+
+.no-bookings {
+  color: #999;
+  font-style: italic;
+  padding: 12px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* ========== ЛЕГЕНДА ========== */
+.legend {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+  border: 1px solid #9e9e9e;
+}
+
+.legend-color.pending {
+  background: #fff9c4;
+  border-color: #ffd54f;
+}
+
+.legend-color.confirmed {
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.legend-color.past {
+  background: #a9a9a9;
+  border-color: #696969;
+}
+
+/* ========== ЗАГРУЗКА ========== */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #01579b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* ========== МОДАЛЬНОЕ ОКНО ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  border: 3px solid #d32f2f;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #d32f2f;
+}
+
+.modal-header h3 {
+  color: #d32f2f;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #d32f2f;
+}
+
+.modal-body {
+  margin-bottom: 25px;
+}
+
+.modal-body p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-badge.pending {
+  background: #fff9c4;
+  color: #5d4037;
+}
+
+.status-badge.confirmed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.confirm-btn:hover {
+  background: #388e3c;
+}
+
+.cancel-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.cancel-btn:hover {
+  background: #b71c1c;
+}
+
+.close-modal-btn {
+  background: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.close-modal-btn:hover {
+  background: #616161;
+}
+
+/* ========== МОБИЛЬНАЯ ВЕРСИЯ ========== */
+@media (max-width: 768px) {
+  .home {
+    padding: 10px;
+  }
+  
+  .lanes-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-display {
+    min-width: 200px;
+    font-size: 1rem;
+  }
+  
+  .day-row {
+    flex-direction: column;
+  }
+  
+  .day-header {
+    width: 100%;
+  }
+  
+  .day-bookings {
+    width: 100%;
+  }
+  
+  .booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .booking-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ========== ПРИВАТНАЯ ЗАНЯТОСТЬ СЛОТА ========== */
+.slot.privateBooked {
+  background: #ffebee;
+  border-color: #ef9a9a;
+  border-width: 3px;
+  cursor: default;
+}
+
+.slot.privateBooked:hover {
+  background: #ffebee;
+  transform: none;
+  box-shadow: none;
+}
+
+.occupied-text {
+  color: #c62828;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.booking-status-text {
+  color: #555;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+
+/* ==========================================================
+   2026-08 — COMPACT FULLHD LAYOUT
+   ========================================================== */
+
+.home {
+  max-width: 1360px;
+  padding: 12px 16px 18px;
+}
+
+.welcome-section {
+  margin-bottom: 16px;
+  padding: 15px 20px;
+  border-width: 1px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(1, 87, 155, 0.20);
+}
+
+.welcome-section h1 {
+  font-size: 1.35rem;
+}
+
+.user-greeting p,
+.auth-prompt p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.highlight-text,
+.prompt-text {
+  font-size: 1.22rem;
+}
+
+.profile-btn {
+  padding: 8px 18px;
+  margin-top: 4px;
+}
+
+.auth-buttons {
+  gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+  padding: 8px 18px;
+}
+
+.content {
+  padding: 16px;
+  border-width: 1px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.93);
+}
+
+.view-toggle {
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+
+.view-toggle button {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}
+
+.date-selector {
+  gap: 10px;
+  margin: 10px 0 14px;
+  padding: 9px 12px;
+  border-width: 1px;
+}
+
+.date-selector button {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+}
+
+.date-display {
+  min-width: 230px;
+  padding: 6px 12px;
+  font-size: 1.05rem;
+  border-width: 1px;
+}
+
+.lanes-container {
+  gap: 16px;
+  padding: 12px;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.lane {
+  padding: 10px;
+  border-width: 1px;
+}
+
+.lane h2 {
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  font-size: 1.12rem;
+}
+
+.slots {
+  gap: 6px;
+}
+
+.slot {
+  height: 62px;
+  min-height: 62px;
+  padding: 7px 10px;
+  border-width: 1px;
+}
+
+.slot-time {
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+}
+
+.slot-info {
+  font-size: 0.78rem;
+  line-height: 1.15;
+}
+
+.user-name {
+  font-size: 0.82rem;
+}
+
+.user-phone {
+  font-size: 0.78rem;
+}
+
+.placeholder {
+  height: 1.4em;
+}
+
+.slot.pending,
+.slot.confirmed,
+.slot.privateBooked {
+  border-width: 2px;
+}
+
+.occupied-text {
+  font-size: 0.86rem;
+}
+
+.booking-status-text {
+  font-size: 0.78rem;
+}
+
+/* Неделя тоже становится компактнее */
+.week-navigation {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+}
+
+.nav-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 1rem;
+}
+
+.week-title {
+  font-size: 1.05rem;
+}
+
+.week-days {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.day-row {
+  gap: 10px;
+  padding: 8px;
+}
+
+.day-header {
+  padding: 6px;
+  min-width: 75px;
+}
+
+.day-name {
+  font-size: 1rem;
+}
+
+.day-date {
+  font-size: 0.82rem;
+}
+
+.day-bookings {
+  gap: 6px;
+}
+
+.booking-card {
+  padding: 7px 10px;
+  min-height: 42px;
+  font-size: 0.88rem;
+}
+
+.booking-info {
+  gap: 10px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.legend {
+  margin: 12px 0 4px;
+  gap: 14px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 8px;
+  }
+
+  .welcome-section {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .lanes-container {
+    padding: 8px;
+  }
+
+  .slot {
+    height: 60px;
+    min-height: 60px;
+  }
+}

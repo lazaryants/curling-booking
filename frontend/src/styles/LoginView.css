@@ -1,0 +1,115 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+h2 {
+  text-align: center;
+  color: #01579b;
+  margin-bottom: 30px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input:focus {
+  outline: none;
+  border-color: #01579b;
+}
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #01579b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit-btn:hover:not(:disabled) {
+  background: #004d40;
+}
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.register-link a {
+  color: #01579b;
+  text-decoration: none;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
+.error-message {
+  background: #ffebee;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+/* ==========================================================
+   2026-08 — COMPACT LOGIN
+   ========================================================== */
+
+.login-container {
+  min-height: calc(100vh - 54px);
+  padding: 16px;
+}
+
+.login-box {
+  max-width: 380px;
+  padding: 24px;
+  background: rgba(255,255,255,0.95);
+  box-shadow:
+    0 12px 32px rgba(27, 81, 117, 0.14),
+    0 2px 7px rgba(0,0,0,0.06);
+}
+
+.login-box h2 {
+  margin-bottom: 18px;
+}
+
+.login-box .form-group {
+  margin-bottom: 14px;
+}
+
+.login-box input {
+  padding: 9px 10px;
+}
+
+.login-box .submit-btn {
+  padding: 10px;
+}
+
+.login-box .register-link {
+  margin-top: 14px;
+}

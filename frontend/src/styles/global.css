@@ -1,0 +1,281 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Глобальный ледовый фон */
+html {
+  min-height: 100%;
+  background: #eaf6fc;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-color: #eaf6fc;
+
+  /*
+   * Слои снизу вверх:
+   * - крупный house;
+   * - линии дорожки;
+   * - мягкие голубые облака;
+   * - ледовые царапины.
+   */
+  background-image:
+    radial-gradient(
+      circle at 92% 88%,
+      transparent 0 58px,
+      rgba(214, 46, 46, 0.12) 59px 88px,
+      transparent 89px 124px,
+      rgba(23, 103, 171, 0.14) 125px 174px,
+      transparent 175px
+    ),
+
+    linear-gradient(
+      82deg,
+      transparent 0 67%,
+      rgba(202, 52, 52, 0.07) 67.1% 67.35%,
+      transparent 67.45%
+    ),
+
+    linear-gradient(
+      98deg,
+      transparent 0 78%,
+      rgba(36, 111, 173, 0.07) 78.1% 78.35%,
+      transparent 78.45%
+    ),
+
+    radial-gradient(
+      ellipse at 18% 20%,
+      rgba(255,255,255,0.95) 0,
+      rgba(255,255,255,0) 45%
+    ),
+
+    radial-gradient(
+      ellipse at 75% 38%,
+      rgba(186, 224, 245, 0.25) 0,
+      rgba(186, 224, 245, 0) 48%
+    ),
+
+    repeating-linear-gradient(
+      118deg,
+      rgba(255,255,255,0) 0 25px,
+      rgba(255,255,255,0.34) 26px,
+      rgba(255,255,255,0) 27px 73px
+    ),
+
+    repeating-linear-gradient(
+      67deg,
+      rgba(68, 145, 194, 0) 0 41px,
+      rgba(68, 145, 194, 0.045) 42px,
+      rgba(68, 145, 194, 0) 43px 96px
+    ),
+
+    linear-gradient(
+      135deg,
+      #f8fdff 0%,
+      #e5f4fb 42%,
+      #edf8fc 68%,
+      #dceff8 100%
+    );
+
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat,
+                     no-repeat, no-repeat,
+                     repeat, repeat, no-repeat;
+  background-size:
+    520px 520px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    320px 320px,
+    420px 420px,
+    100% 100%;
+
+  background-position:
+    right -130px bottom -150px,
+    center,
+    center,
+    center,
+    center,
+    center,
+    center,
+    center;
+}
+
+/* Общие стили для карточек */
+.card {
+  background: var(--bg-card);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* Заголовки секций */
+.section-title {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-secondary);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+}
+
+/* Кнопки */
+.btn {
+  padding: var(--btn-padding);
+  border-radius: var(--btn-border-radius);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+}
+.btn-secondary:hover {
+  background: var(--color-secondary-dark);
+}
+
+.btn-success {
+  background: var(--color-success);
+  color: white;
+  border: none;
+}
+.btn-success:hover {
+  background: #1b5e20;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Кнопки */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Инпуты */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Лоадер */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  font-weight: bold;
+}
+
+/* Пустые состояния */
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  transition: var(--transition);
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+
+/* ==========================================================
+   2026-08 — CURLING ICE VISUAL
+   ========================================================== */
+
+html {
+  min-height: 100%;
+  background: #e9f6fb;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e9f6fb;
+  background-image: url('/curling-ice.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 8px 24px rgba(31, 88, 126, 0.10),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: 62% top;
+  }
+}

@@ -1,0 +1,113 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <defs>
+    <linearGradient id="granite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce2e7"/>
+      <stop offset="42%" stop-color="#aab3bb"/>
+      <stop offset="100%" stop-color="#68727b"/>
+    </linearGradient>
+
+    <linearGradient id="graniteTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f5"/>
+      <stop offset="100%" stop-color="#8e989f"/>
+    </linearGradient>
+
+    <linearGradient id="redHandle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4b45"/>
+      <stop offset="100%" stop-color="#b51217"/>
+    </linearGradient>
+  </defs>
+
+  <!-- тень -->
+  <ellipse
+    cx="32"
+    cy="53"
+    rx="25"
+    ry="5"
+    fill="#082a45"
+    opacity="0.18"
+  />
+
+  <!-- корпус -->
+  <path
+    d="
+      M8 37
+      C8 28 18 23 32 23
+      C46 23 56 28 56 37
+      L54 46
+      C53 53 45 57 32 57
+      C19 57 11 53 10 46
+      Z
+    "
+    fill="url(#granite)"
+    stroke="#59636b"
+    stroke-width="2"
+  />
+
+  <!-- верхняя гранитная площадка -->
+  <ellipse
+    cx="32"
+    cy="35"
+    rx="22"
+    ry="10"
+    fill="url(#graniteTop)"
+    opacity="0.92"
+  />
+
+  <!-- тёмная гранитная полоса -->
+  <path
+    d="M10 42 C22 46 42 46 54 42 L53 48 C40 52 24 52 11 48 Z"
+    fill="#69747d"
+    opacity="0.75"
+  />
+
+  <!-- крепление ручки -->
+  <ellipse
+    cx="29"
+    cy="26"
+    rx="10"
+    ry="4"
+    fill="#a10f14"
+  />
+
+  <!-- ручка боком -->
+  <path
+    d="
+      M20 25
+      C20 19 24 15 31 15
+      L45 15
+      C49 15 51 13 51 10
+      C51 7 49 6 46 6
+      L31 6
+      C19 6 13 13 13 23
+      C13 27 16 29 20 29
+      Z
+    "
+    fill="url(#redHandle)"
+    stroke="#8f1015"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+  <!-- блик на ручке -->
+  <path
+    d="M20 21 C21 16 25 12 32 12 L44 12"
+    fill="none"
+    stroke="#ff8a80"
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity="0.8"
+  />
+
+  <!-- блик на камне -->
+  <ellipse
+    cx="24"
+    cy="32"
+    rx="9"
+    ry="4"
+    fill="#ffffff"
+    opacity="0.28"
+  />
+</svg>

@@ -1,0 +1,112 @@
+/* ТОЛЬКО ЛОКАЛЬНЫЕ СТИЛИ — БЕЗ ФОНА! */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* НЕТ background — используем глобальный из global.css */
+}
+.register-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+h2 {
+  color: #01579b;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.form-group { margin-bottom: 20px; }
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+input:focus {
+  outline: none;
+  border-color: #01579b;
+}
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  background: #01579b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.register-btn:hover { background: #004d40; }
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+.login-link a {
+  color: #01579b;
+  font-weight: 600;
+  text-decoration: none;
+}
+.login-link a:hover { text-decoration: underline; }
+
+
+/* ==========================================================
+   2026-08 — COMPACT REGISTER
+   ========================================================== */
+
+.register-container {
+  min-height: calc(100vh - 54px);
+  padding: 16px;
+}
+
+.register-form {
+  max-width: 420px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.95);
+  box-shadow:
+    0 12px 32px rgba(27, 81, 117, 0.14),
+    0 2px 7px rgba(0,0,0,0.06);
+}
+
+.register-form h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+.register-form .form-group {
+  margin-bottom: 14px;
+}
+
+.register-form label {
+  margin-bottom: 5px;
+}
+
+.register-form input {
+  padding: 10px 12px;
+}
+
+.register-form .register-btn {
+  padding: 11px;
+}
+
+.register-form .login-link {
+  margin-top: 14px;
+}

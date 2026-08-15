@@ -1,0 +1,1087 @@
+/* /var/www/bro/frontend/src/styles/AdminView.css */
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.admin-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-tabs button {
+  padding: 10px 20px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-tabs button.active {
+  background: #d32f2f;
+  color: white;
+}
+
+/* ========== ПОЛЬЗОВАТЕЛИ ========== */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-user-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.user-card {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 20px rgba(1, 87, 155, 0.15);
+  transform: translateY(-2px);
+  border-color: #01579b;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.user-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.user-title strong {
+  color: #01579b;
+  font-size: 1.1rem;
+}
+
+.user-role {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.user-role.admin {
+  background: #d32f2f;
+  color: white;
+}
+
+.user-role.user {
+  background: #01579b;
+  color: white;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.user-info div {
+  color: #333;
+  padding: 4px 0;
+  word-break: break-word;
+}
+
+.user-info strong {
+  color: #01579b;
+  margin-right: 8px;
+  min-width: 80px;
+  display: inline-block;
+}
+
+/* ========== КАРТОЧКИ БРОНИРОВАНИЙ ========== */
+.bookings-management {
+  width: 100%;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.booking-card {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.booking-card:hover {
+  box-shadow: 0 8px 20px rgba(1, 87, 155, 0.15);
+  transform: translateY(-2px);
+  border-color: #01579b;
+}
+
+.booking-card.pending {
+  background: #fff9c4;
+  border-left: 6px solid #ffd54f;
+}
+
+.booking-card.confirmed {
+  background: #e8f5e9;
+  border-left: 6px solid #4caf50;
+}
+
+.booking-card.cancelled_by_user,
+.booking-card.cancelled_by_admin,
+.booking-card.rejected_by_admin {
+  background: #ffebee;
+  border-left: 6px solid #d32f2f;
+}
+
+.booking-card.completed {
+  background: #f5f5f5;
+  border-left: 6px solid #9e9e9e;
+}
+
+/* Заголовок карточки - дата слева, статус справа */
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+
+.booking-date {
+  font-weight: bold;
+  color: #01579b;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-date::before {
+  content: "📅";
+  font-size: 1.1rem;
+}
+
+.booking-status {
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.booking-status.pending {
+  background: #ffd54f;
+  color: #5d4037;
+}
+
+.booking-status.confirmed {
+  background: #4caf50;
+  color: white;
+}
+
+.booking-status.cancelled_by_user,
+.booking-status.cancelled_by_admin,
+.booking-status.rejected_by_admin {
+  background: #d32f2f;
+  color: white;
+}
+
+.booking-status.completed {
+  background: #757575;
+  color: white;
+}
+
+/* Детали бронирования - ТОЛЬКО ВЕРТИКАЛЬНО */
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.booking-info {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  color: #333;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.booking-info strong {
+  color: #01579b;
+  min-width: 100px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.booking-info span {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Информация о пользователе - всегда вертикально */
+.booking-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  margin-top: 5px;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.user-detail {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  background: rgba(1, 87, 155, 0.08);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-detail .label {
+  color: #01579b;
+  font-weight: bold;
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-detail .value {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Кнопки действий */
+.booking-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid rgba(0,0,0,0.08);
+}
+
+.booking-actions .btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-actions .btn-success {
+  background: #4caf50;
+  color: white;
+}
+
+.booking-actions .btn-success:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.booking-actions .btn-secondary {
+  background: #d32f2f;
+  color: white;
+}
+
+.booking-actions .btn-secondary:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.past-booking {
+  color: #9e9e9e;
+  font-style: italic;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border-radius: 30px;
+}
+
+.past-booking::before {
+  content: "⏰";
+  font-size: 1rem;
+}
+
+/* ========== ГРУППИРОВКА ПО ДАТАМ ========== */
+.date-group {
+  margin-bottom: 30px;
+}
+
+.date-header {
+  display: inline-block;
+  color: white;
+  background: #01579b;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding: 8px 24px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(1, 87, 155, 0.2);
+}
+
+/* ========== ФИЛЬТРЫ ========== */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #01579b;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  min-width: 200px;
+  transition: all 0.3s;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #01579b;
+  box-shadow: 0 0 0 3px rgba(1, 87, 155, 0.1);
+}
+
+/* ========== КНОПКИ ========== */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-primary {
+  background: #01579b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #004d40;
+}
+
+.btn-secondary {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #b71c1c;
+}
+
+.btn-success {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #1b5e20;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========== МОДАЛЬНЫЕ ОКНА ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  max-width: 600px;
+  width: 90%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #d32f2f;
+}
+
+.modal-header h3 {
+  color: #d32f2f;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #d32f2f;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row strong {
+  color: #01579b;
+  margin-right: 10px;
+  min-width: 120px;
+}
+
+.form-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-bookings .section-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.bookings-list-small {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-item {
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.booking-item.pending {
+  background: #fff9c4;
+  border-left-color: #ffd54f;
+}
+
+.booking-item.confirmed {
+  background: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+.booking-item.cancelled_by_user,
+.booking-item.cancelled_by_admin,
+.booking-item.rejected_by_admin {
+  background: #ffebee;
+  border-left-color: #d32f2f;
+}
+
+.booking-item.completed {
+  background: #f5f5f5;
+  border-left-color: #9e9e9e;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* ========== ЗАГРУЗКА И ПУСТЫЕ СОСТОЯНИЯ ========== */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 10px;
+  }
+  
+  .users-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-info {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .user-info div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-info strong {
+    margin-bottom: 4px;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+  }
+  
+  .user-actions button {
+    width: 100%;
+  }
+  
+  .booking-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .booking-status {
+    align-self: flex-start;
+  }
+  
+  .booking-actions {
+    flex-direction: column;
+  }
+  
+  .booking-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .booking-user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .booking-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .booking-info strong {
+    min-width: auto;
+  }
+  
+  .user-detail {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .user-detail .label {
+    min-width: auto;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .user-title {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .user-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .booking-card {
+    padding: 15px;
+  }
+  
+  .booking-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .booking-info strong {
+    min-width: auto;
+  }
+  
+  .date-header {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================
+   2026-08 — COMPACT FULLHD ADMIN
+   ========================================================== */
+
+.admin-container {
+  max-width: 1360px;
+  padding: 12px 16px 20px;
+}
+
+.admin-header {
+  margin-bottom: 16px;
+}
+
+.admin-header h1 {
+  margin-bottom: 4px;
+}
+
+.admin-header p {
+  font-size: 1rem;
+}
+
+.admin-tabs {
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.admin-tabs button {
+  padding: 8px 16px;
+}
+
+.users-header {
+  margin-bottom: 12px;
+}
+
+.users-list {
+  gap: 10px;
+}
+
+.user-card {
+  padding: 13px 15px;
+  border-radius: 9px;
+}
+
+.user-header {
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+}
+
+.user-title {
+  gap: 10px;
+}
+
+.user-info {
+  gap: 7px 12px;
+  margin-bottom: 8px;
+}
+
+.user-info div {
+  padding: 2px 0;
+}
+
+.bookings-list {
+  gap: 12px;
+}
+
+.booking-card {
+  padding: 13px 15px;
+  border-radius: 9px;
+}
+
+.booking-header {
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+}
+
+.booking-date {
+  font-size: 1rem;
+}
+
+.booking-status {
+  padding: 4px 11px;
+  font-size: 0.78rem;
+}
+
+.booking-details {
+  gap: 7px;
+  margin-bottom: 9px;
+  padding: 2px 0;
+}
+
+.booking-info {
+  gap: 10px;
+  padding: 6px 9px;
+  border-radius: 6px;
+}
+
+.booking-info strong {
+  min-width: 90px;
+  font-size: 0.85rem;
+}
+
+.booking-user-info {
+  gap: 6px;
+  padding: 9px 0;
+}
+
+.user-detail {
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+.user-detail .label {
+  min-width: 90px;
+}
+
+.booking-actions {
+  gap: 8px;
+  margin-top: 9px;
+  padding-top: 9px;
+}
+
+.booking-actions .btn {
+  padding: 7px 16px;
+  font-size: 0.8rem;
+}
+
+
+/* ==========================================================
+   2026-08 — ADMIN CARD REFINEMENT
+   ========================================================== */
+
+.users-list .user-card {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(238, 248, 253, 0.72) 0,
+      rgba(255,255,255,0.97) 95px,
+      rgba(255,255,255,0.96) 100%
+    );
+  border: 1px solid rgba(29, 103, 157, 0.18);
+  border-left: 4px solid #0b65a3;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 14px rgba(24, 75, 111, 0.08),
+    0 1px 3px rgba(0,0,0,0.04);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.users-list .user-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(29, 103, 157, 0.32);
+  border-left-color: #07558a;
+  box-shadow:
+    0 7px 18px rgba(24, 75, 111, 0.12),
+    0 2px 5px rgba(0,0,0,0.05);
+}
+
+.users-list .user-header {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(21, 92, 143, 0.12);
+}
+
+.users-list .user-title {
+  align-items: center;
+}
+
+.users-list .user-info {
+  margin-bottom: 2px;
+  padding-top: 2px;
+}
+
+.users-list .user-info strong {
+  color: #075b99;
+}
+
+/* Компактные, но визуально более аккуратные кнопки */
+.users-list .btn {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.users-list .btn-primary {
+  background: linear-gradient(180deg, #0870b8 0%, #075a96 100%);
+}
+
+.users-list .btn-secondary {
+  background: linear-gradient(180deg, #e63b38 0%, #c62828 100%);
+}
+
+
+/* ==========================================================
+   2026-08 — ADMIN USER CARD V2
+   ========================================================== */
+
+.users-list {
+  gap: 8px;
+}
+
+.users-list .user-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(29, 103, 157, 0.16);
+  border-left: 4px solid #0b65a3;
+  border-radius: 9px;
+  padding: 10px 12px;
+  box-shadow:
+    0 3px 10px rgba(28, 78, 111, 0.07),
+    0 1px 2px rgba(0,0,0,0.04);
+  transform: none;
+}
+
+.users-list .user-card:hover {
+  transform: none;
+  border-color: rgba(29, 103, 157, 0.25);
+  border-left-color: #07558a;
+  box-shadow:
+    0 5px 14px rgba(28, 78, 111, 0.10),
+    0 1px 3px rgba(0,0,0,0.05);
+}
+
+.users-list .user-header {
+  margin: 0 0 8px;
+  padding: 0 0 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(21, 92, 143, 0.11);
+}
+
+.users-list .user-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.users-list .user-title h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #075b99;
+  line-height: 1.2;
+}
+
+.users-list .role-badge,
+.users-list .user-role {
+  margin: 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.70rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.users-list .user-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+}
+
+.users-list .user-actions .btn {
+  padding: 6px 12px;
+  min-height: 30px;
+  border-radius: 6px;
+  font-size: 0.77rem;
+  line-height: 1;
+  box-shadow: none;
+}
+
+/* Нижняя часть карточки — аккуратная сетка */
+.users-list .user-info {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(0, 1fr)
+    minmax(0, 1.15fr)
+    minmax(0, 1.15fr);
+  column-gap: 18px;
+  row-gap: 5px;
+  margin: 0;
+  padding: 0;
+  align-items: baseline;
+}
+
+.users-list .user-info > div {
+  min-width: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  line-height: 1.25;
+}
+
+.users-list .user-info strong {
+  flex: 0 0 auto;
+  min-width: auto;
+  color: #075b99;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.users-list .user-info span,
+.users-list .user-info div {
+  font-size: 0.82rem;
+}
+
+@media (max-width: 1100px) {
+  .users-list .user-info {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .users-list .user-card {
+    padding: 10px;
+  }
+
+  .users-list .user-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .users-list .user-actions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+  .users-list .user-info {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
